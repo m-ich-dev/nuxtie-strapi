@@ -12,7 +12,10 @@
     "start": "strapi start",
     "strapi": "strapi",
     "upgrade": "npx @strapi/upgrade latest",
-    "upgrade:dry": "npx @strapi/upgrade latest --dry"
+    "upgrade:dry": "npx @strapi/upgrade latest --dry",
+    "cs": "config-sync",
+    "cs:import": "npm run cs import -- --yes",
+    "cs:diff": "npm run cs diff"
   },
   "dependencies": {
     "@strapi/plugin-users-permissions": "5.49.0",
