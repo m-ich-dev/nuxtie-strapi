@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: dockerfile
 
-    networks: ["pg_net"]
+    networks: ["pg_net", "www"]
     ports:
       - 1337:1337
     profiles: ["root", "strapi", "nuxtie-strapi"]
@@ -17,4 +17,7 @@ services:
 
 networks:
   pg_net:
+    name: pg_network
+    external: true
+  www:
     external: true
